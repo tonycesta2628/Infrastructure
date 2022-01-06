@@ -12,6 +12,7 @@ provider "azurerm" {
 
 data "azurerm_resource_group" "resgroup" {
   name = "JLL-AM-RG-Corrigo-CSDev01"
+  location = "Central US"
 }
 
 
