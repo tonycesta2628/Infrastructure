@@ -12,14 +12,14 @@ provider "azurerm" {
 
 data "azurerm_resource_group" "resgroup" {
   name = "JLL-AM-RG-Corrigo-CSDev01"
-  location = "Central US"
+  
 }
 
 
 resource "azurerm_storage_account" "tonneytestsa" {
   name                     = "tonneysa"
-  resource_group_name      = azurerm_resource_group.resgroup.name
-  location                 = azurerm_resource_group.resgroup.location
+  resource_group_name      = data.azurerm_resource_group.resgroup.name
+  location                 = data.azurerm_resource_group.resgroup.location
   account_tier             = "Standard"
   account_kind             = "StorageV2"
   account_replication_type = var.replicationType
