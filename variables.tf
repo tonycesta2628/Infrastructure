@@ -1,5 +1,5 @@
 variable "replicationType" {
     description = "This type of replication"
-    type = "string"
+    type = string
     default = "GRS"
 }

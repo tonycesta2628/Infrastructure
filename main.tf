@@ -14,10 +14,6 @@ data "azurerm_resource_group" "resgroup" {
   name = "JLL-AM-RG-Corrigo-CSDev01"
 }
 
-resource "azurerm_storage_account" "tonneytestsa" {
-  name     = "tonneysa"
-  location = "Central US"
-}
 
 resource "azurerm_storage_account" "tonneytestsa" {
   name                     = "tonneysa"
